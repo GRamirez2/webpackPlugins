@@ -1,6 +1,33 @@
 # WebpackTest
+## Adding Bootstrap
+1. make sure you have the latest cli
+2. `npm install bootstrap font-awesome angular-font-awesome --save`
+3. In the angular.json
+   ```
+    "styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/font-awesome/css/font-awesome.css"
+    ],
+  
+4. In the main module
+  ```
+  import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+  @NgModule({
+    //...
+    imports: [
+      //...
+      AngularFontAwesomeModule
+    ],
+  ```
+5. Inside the src/styles.css file add:
+   
+  `@import "~bootstrap/dist/css/bootstrap.css";`
+
+  `@import "~font-awesome/css/font-awesome.css";`
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 ## Development server
 
